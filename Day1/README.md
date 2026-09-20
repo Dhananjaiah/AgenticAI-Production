@@ -2,6 +2,17 @@
 
 Day 1 explains what a language model receives and returns, tokens and context in plain language, prompt anatomy, variable output, and the request/response boundary. The learner finishes with a repeatable first-call script run and prompt notes that record evidence and limits.
 
+## Course environment
+
+Run the labs from **Ubuntu Bash** on any supported Ubuntu host: local Ubuntu, a VM, cloud instance, WSL, or another Ubuntu environment. Use the Day 0 workspace and environment:
+
+```bash
+cd ~/src/agentic-ai-40days
+source .venv/bin/activate
+```
+
+The host does not change the course commands.
+
 ## Learner outcome
 
 By the end, the learner can explain an LLM without calling it magic, identify the parts of a model request and response, write a clear prompt, run the same request again, and describe what the result proves.

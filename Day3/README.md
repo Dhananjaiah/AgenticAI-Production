@@ -2,6 +2,17 @@
 
 Day 3 teaches the Python already visible in earlier labs: variables, strings, f-strings, functions, type hints, lists, dictionaries, loops, and conditions. Every idea is applied to the customer-review workflow instead of isolated toy code.
 
+## Course environment
+
+Run the labs from **Ubuntu Bash** on any supported Ubuntu host: local Ubuntu, a VM, cloud instance, WSL, or another Ubuntu environment. Use the Day 0 workspace and environment:
+
+```bash
+cd ~/src/agentic-ai-40days
+source .venv/bin/activate
+```
+
+The host does not change the course commands.
+
 ## Learner outcome
 
 By the end, the learner can read and change a small Python workflow, split work into focused functions, process a list, choose an action with `if/elif/else`, and diagnose the first useful error.

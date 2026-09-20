@@ -1,5 +1,16 @@
 # Day 4 recording runbook
 
+## Ubuntu environment
+
+Run every live command from `~/src/agentic-ai-40days` in Ubuntu Bash with the Day 0 environment active:
+
+```bash
+source .venv/bin/activate
+```
+
+Ubuntu may run locally, in a VM, in the cloud, through WSL, or on another supported host. The host does not change these commands.
+
+
 ## Outcome and proof
 
 The learner can inspect the API boundary and handle failure by evidence. Proof includes successful compile checks, deterministic status-code translation, a locally simulated provider failure that does not crash, and a written retry/idempotency decision.

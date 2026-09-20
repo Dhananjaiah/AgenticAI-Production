@@ -48,6 +48,16 @@ git check-ignore -v .env
 
 Open `.env` in your available editor and add the real provider credential privately. The Git check must print the rule that ignores `.env`.
 
+## Production companion package
+
+Days 1?5 include evidence templates in the production companion package. Keep that package at the following optional conventional location, or set `COURSE_PRODUCTION_DIR` to its actual Ubuntu path before using a template-copy command:
+
+```bash
+export COURSE_PRODUCTION_DIR="$HOME/src/AgenticAI-Production"
+```
+
+This path is independent of the Ubuntu host type.
+
 ## Optional host appendices
 
 - **WSL:** install Ubuntu and open the repository through VS Code?s WSL connection if desired.

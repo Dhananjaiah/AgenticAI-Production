@@ -1,5 +1,16 @@
 # Day 5 recording runbook
 
+## Ubuntu environment
+
+Run every live command from `~/src/agentic-ai-40days` in Ubuntu Bash with the Day 0 environment active:
+
+```bash
+source .venv/bin/activate
+```
+
+Ubuntu may run locally, in a VM, in the cloud, through WSL, or on another supported host. The host does not change these commands.
+
+
 ## Outcome and proof
 
 The learner can ingest text and text-based PDFs, validate inputs before processing, save results intentionally, and explain unsupported or unreadable documents. Proof includes compile checks, real local text and PDF extraction, controlled unsupported-input failures, and a completed evidence sheet.

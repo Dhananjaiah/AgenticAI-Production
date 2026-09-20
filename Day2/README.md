@@ -2,6 +2,17 @@
 
 Day 2 turns model text into data that software can safely inspect. Learners build a customer-review sorter with a five-part system instruction, JSON parsing, schema validation, bounded retries, and a safe fallback.
 
+## Course environment
+
+Run the labs from **Ubuntu Bash** on any supported Ubuntu host: local Ubuntu, a VM, cloud instance, WSL, or another Ubuntu environment. Use the Day 0 workspace and environment:
+
+```bash
+cd ~/src/agentic-ai-40days
+source .venv/bin/activate
+```
+
+The host does not change the course commands.
+
 ## Learner outcome
 
 By the end, the learner can request a predictable output shape, parse it, validate every field, retry a malformed result a limited number of times, and return a clearly flagged fallback instead of crashing or trusting bad data.

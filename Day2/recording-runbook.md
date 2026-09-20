@@ -1,5 +1,16 @@
 # Day 2 recording runbook
 
+## Ubuntu environment
+
+Run every live command from `~/src/agentic-ai-40days` in Ubuntu Bash with the Day 0 environment active:
+
+```bash
+source .venv/bin/activate
+```
+
+Ubuntu may run locally, in a VM, in the cloud, through WSL, or on another supported host. The host does not change these commands.
+
+
 ## Outcome and proof
 
 The learner builds a structured customer-review sorter and can explain the safety pipeline:

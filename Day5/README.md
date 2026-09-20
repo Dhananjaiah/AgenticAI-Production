@@ -2,6 +2,17 @@
 
 Day 5 moves useful work out of hard-coded prompts and into real documents. Learners build the read → validate → extract → process → write pipeline used by document tools.
 
+## Course environment
+
+Run the labs from **Ubuntu Bash** on any supported Ubuntu host: local Ubuntu, a VM, cloud instance, WSL, or another Ubuntu environment. Use the Day 0 workspace and environment:
+
+```bash
+cd ~/src/agentic-ai-40days
+source .venv/bin/activate
+```
+
+The host does not change the course commands.
+
 ## Learner outcome
 
 By the end, the learner can read UTF-8 text, extract text from a text-based PDF, save a result safely, and explain what to do when a file is missing, too large, unsupported, unreadable, or scanned.

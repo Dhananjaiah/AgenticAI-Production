@@ -1,5 +1,16 @@
 # Day 1 recording runbook
 
+## Ubuntu environment
+
+Run every live command from `~/src/agentic-ai-40days` in Ubuntu Bash with the Day 0 environment active:
+
+```bash
+source .venv/bin/activate
+```
+
+Ubuntu may run locally, in a VM, in the cloud, through WSL, or on another supported host. The host does not change these commands.
+
+
 ## Outcome and evidence
 
 The learner can explain models, tokens, context, prompts, requests, and responses, then prove understanding with:
@@ -12,7 +23,7 @@ The learner can explain models, tokens, context, prompts, requests, and response
 ## Before recording
 
 - Complete Day 0 and verify `.venv`, dependencies, editable install, and local `.env`.
-- Work from `ALL/Agentic-AI-40Days`.
+- Work from `~/src/agentic-ai-40days` in Ubuntu Bash.
 - Open `Day1/demo-commands.html` on the presenter screen.
 - Keep `speaker-notes.md` on a non-recorded screen.
 - Test both solution scripts with the selected provider immediately before recording.
@@ -33,7 +44,7 @@ The learner can explain models, tokens, context, prompts, requests, and response
 
 ## Exact live sequence
 
-Use `demo-commands.html`. Its commands are ordered for Windows PowerShell and include copy buttons, reasons, pass conditions, troubleshooting, and optional cleanup.
+Use `demo-commands.html`. Its commands are ordered for Ubuntu Bash and include copy buttons, reasons, pass conditions, troubleshooting, and optional cleanup.
 
 1. Open the repository and activate `.venv`.
 2. Run the Day 0 no-cost setup checker.
@@ -59,8 +70,8 @@ Use a disposable terminal with `.venv` inactive to show an import error. Do not 
 
 Recovery:
 
-```powershell
-.\.venv\Scripts\Activate.ps1
+```bash
+source .venv/bin/activate
 python -m pip install -r requirements.txt
 python -m pip install -e .
 ```

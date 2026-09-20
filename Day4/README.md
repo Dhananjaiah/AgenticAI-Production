@@ -2,6 +2,17 @@
 
 Day 4 opens the API boundary. Learners inspect what leaves the program, what returns, how secrets grant access, how status codes describe failures, and when retrying is safe.
 
+## Course environment
+
+Run the labs from **Ubuntu Bash** on any supported Ubuntu host: local Ubuntu, a VM, cloud instance, WSL, or another Ubuntu environment. Use the Day 0 workspace and environment:
+
+```bash
+cd ~/src/agentic-ai-40days
+source .venv/bin/activate
+```
+
+The host does not change the course commands.
+
 ## Learner outcome
 
 By the end, the learner can inspect a request and response, keep credentials out of code, classify common failure layers, translate technical errors into useful actions, and distinguish retryable failures from failures that require a real fix.
