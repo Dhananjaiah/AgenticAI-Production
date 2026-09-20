@@ -1,6 +1,6 @@
 # Agentic AI — Production · Day 0
 
-Day 0 turns a clean learner machine into a verified course environment: Python and VS Code, an isolated virtual environment, safe local API configuration, a passing setup checker, and one real AI response.
+Day 0 turns an Ubuntu environment into a verified course workspace: Python, VS Code or a remote editor, an isolated virtual environment, safe local API configuration, a passing setup checker, and one real AI response. Ubuntu may run on a local machine, VM, cloud instance, WSL, or another supported host. Every later course command uses Ubuntu Bash so learners do not switch terminal conventions.
 
 For the complete course plan and continuation instructions, return to the [course README](../README.md), [course content](../COURSE-CONTENT.md), and [AI handoff](../AI-HANDOFF.md).
 
@@ -13,6 +13,18 @@ The presentation follows the production course requirement in `ALL/Agentic-AI-40
 - `speaker-notes.md` — word-for-word narration in simple, everyday English, with silent action and live-demo cues.
 - `recording-runbook.md` — preparation, segment plan, live commands, safety rules, and publish checklist.
 - `presentation.pdf` — printable and shareable version of the slides.
+
+
+## Canonical learner environment
+
+- **Primary course environment:** Ubuntu Linux.
+- **Canonical terminal:** Ubuntu Bash.
+- **Canonical repository path:** `~/src/agentic-ai-40days`.
+- **Virtual environment command:** `source .venv/bin/activate`.
+- **Workspace rule:** work from a project directory in the Ubuntu home folder, such as `~/src/agentic-ai-40days`.
+- **Supported hosts:** local Ubuntu, a local VM, a cloud VM such as AWS EC2 or Oracle Cloud, WSL, or another Ubuntu host with shell access.
+
+The course does not depend on how Ubuntu is hosted. Use the Ubuntu terminal for all course work; host-specific provisioning belongs in an optional appendix, not the main lesson.
 
 ## Presentation controls
 

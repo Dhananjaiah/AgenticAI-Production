@@ -1,161 +1,30 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Agentic AI - Production | Day 0 Demo Commands</title>
-<style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Day 0 Ubuntu environment setup and first AI call"><title>Agentic AI - Production | Day 0 Ubuntu Demo Commands</title><style>
 :root{--bg:#07111f;--panel:#101e31;--panel2:#0b1727;--line:#29445f;--text:#eef5fb;--muted:#afc0d1;--cyan:#56dfd0;--blue:#83baff;--amber:#f3c76b;--green:#82e6a8;--red:#ff8da0}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 100% 0,#143a45,transparent 32%),var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif}.page{width:min(1120px,calc(100% - 32px));margin:auto;padding:42px 0 90px}header{padding-bottom:28px;border-bottom:1px solid var(--line)}h1{font-size:clamp(35px,5vw,62px);letter-spacing:-2px;margin:0 0 10px}header>p{margin:0;color:var(--muted);font-size:20px}.pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}.pills span{border:1px solid var(--line);border-radius:20px;padding:8px 13px;color:var(--blue)}.overview{display:grid;grid-template-columns:1fr 1.35fr;gap:16px;margin:28px 0}.overview article{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:20px}.overview h2{font-size:24px;color:var(--cyan);margin:0}.overview ul{margin:13px 0 0;padding-left:22px;color:var(--muted);line-height:1.55}.overview li+li{margin-top:7px}.overview strong{color:var(--text)}nav{position:sticky;top:0;z-index:5;display:flex;gap:8px;overflow:auto;padding:13px 0;background:#07111ff2;backdrop-filter:blur(10px)}nav a{flex:none;color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px}nav a:hover{color:var(--cyan);border-color:var(--cyan)}section{scroll-margin-top:75px;padding-top:34px}h2{font-size:31px;margin:0 0 8px}.lead{color:var(--muted);line-height:1.55;margin:0 0 16px}.command{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#040b14;margin:13px 0}.bar{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--panel);color:var(--muted);font:13px Consolas,monospace;letter-spacing:1px}.copy{border:1px solid var(--line);border-radius:7px;background:#173650;color:var(--text);font-weight:700;padding:8px 13px;cursor:pointer}.copy:hover{border-color:var(--cyan);color:var(--cyan)}.copy.done{border-color:var(--green);color:var(--green)}pre{margin:0;padding:20px;overflow:auto;color:#d5eaff;font:16px/1.55 Consolas,"Courier New",monospace;white-space:pre}.explain{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0 18px}.explain p{margin:0;padding:14px 16px;border:1px solid var(--line);border-radius:9px;background:var(--panel2);color:var(--muted);line-height:1.55}.explain strong{display:block;color:var(--cyan);margin-bottom:5px}.explain .why strong{color:var(--amber)}.expected,.notice{border-left:3px solid var(--green);background:#12312975;padding:13px 16px;margin-top:12px;color:#dff9e8;border-radius:0 7px 7px 0;line-height:1.5}.notice{border-left-color:var(--amber);background:#382d1875;color:#ffe9ba}.danger{border-left-color:var(--red);background:#3c1c2675;color:#ffdce2}details{margin-top:28px;border:1px solid var(--line);border-radius:12px;background:var(--panel2);padding:18px}summary{cursor:pointer;font-size:21px;font-weight:700;color:var(--amber)}code{color:var(--blue)}footer{margin-top:58px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);line-height:1.5}@media(max-width:780px){.overview,.explain{grid-template-columns:1fr}.page{width:min(100% - 20px,1120px)}}
-</style>
-</head>
-<body>
-<main class="page">
-<header>
-<h1>Day 0 demo commands</h1>
-<p>From a downloaded repository to one verified AI response</p>
-<div class="pills"><span>Primary terminal: Windows PowerShell</span><span>Python 3.11+</span><span>Private API key</span><span>Real provider call</span></div>
-</header>
-
-<div class="overview">
-<article>
-<h2>What are we setting up?</h2>
-<ul>
-<li><strong>Python</strong> runs the course code.</li>
-<li><strong>VS Code</strong> opens and edits the project.</li>
-<li>A <strong>virtual environment</strong> keeps this project's packages separate.</li>
-<li>A local <strong>.env</strong> file stores the private API key.</li>
-<li>The <strong>setup checker</strong> proves the local environment is ready.</li>
-</ul>
-</article>
-<article>
-<h2>What are we doing in this demo?</h2>
-<ul>
-<li>Check Python, Git, and VS Code.</li>
-<li>Open the course repository.</li>
-<li>Create and activate <code>.venv</code>.</li>
-<li>Install the course packages.</li>
-<li>Create <code>.env</code> from the safe example file.</li>
-<li>Add the real API key privately and confirm Git ignores it.</li>
-<li>Run the no-cost setup checker.</li>
-<li>Run one real AI request and inspect the result.</li>
-<li>Change one prompt, rerun, and compare the response.</li>
-</ul>
-</article>
-</div>
-
-<nav><a href="#tools">Tools</a><a href="#repo">Repository</a><a href="#venv">Environment</a><a href="#packages">Packages</a><a href="#config">Secret</a><a href="#check">Check</a><a href="#call">AI call</a><a href="#variation">Variation</a><a href="#troubleshoot">Troubleshoot</a></nav>
-
-<section id="tools">
-<h2>1. Verify the required tools</h2>
-<div class="command"><div class="bar"><span>WINDOWS POWERSHELL</span><button class="copy">Copy</button></div><pre>python --version
+</style></head><body><main class="page"><header><h1>Day 0 demo commands</h1><p>From an Ubuntu environment to one verified AI response ? using the same Ubuntu commands on a local machine, VM, cloud instance, WSL, or another supported host.</p><div class="pills"><span>Course shell: Ubuntu Bash</span><span>Python 3.11+</span><span>Repository: ~/src</span><span>Private API key</span><span>Real provider call</span></div></header><div class="overview"><article><h2>One consistent environment</h2><ul><li><strong>Ubuntu</strong> may run locally, in a VM, in the cloud, through WSL, or on another supported host.</li><li><strong>Ubuntu Bash</strong> is the only terminal convention used in the course.</li><li>The repository lives under <code>~/src</code> in the Ubuntu home directory.</li><li>A project-local <strong>.venv</strong> and ignored <strong>.env</strong> stay inside that Linux workspace.</li></ul></article><article><h2>What are we doing?</h2><ul><li>Verify Ubuntu, Python, Git, and an editor connection.</li><li>Clone the course under <code>~/src</code>.</li><li>Create and activate <code>.venv</code>.</li><li>Install packages, create private configuration, and prove Git ignores it.</li><li>Run the setup checker, then one real AI request.</li></ul></article></div><nav><a href="#environment">Ubuntu host</a><a href="#tools">Tools</a><a href="#repo">Repository</a><a href="#venv">Environment</a><a href="#packages">Packages</a><a href="#config">Secret</a><a href="#check">Check</a><a href="#call">AI call</a><a href="#troubleshoot">Troubleshoot</a></nav><section id="environment"><h2>0. Start from any supported Ubuntu host</h2><p class="lead">Use Ubuntu on a local computer, local VM, cloud instance, WSL, or another supported host. The course commands are identical.</p><div class="notice"><strong>Required:</strong> Ubuntu Bash, Python 3.11+, Git, an editor, and network access for live provider calls. Host provisioning is outside the lesson; start once you have an Ubuntu terminal.</div><div class="expected">Pass: your Ubuntu prompt is available and you can create files in your Linux home directory.</div></section><section id="tools"><h2>1. Verify the Ubuntu tools</h2><p class="lead">Open Ubuntu. These are the canonical course commands.</p><div class="command"><div class="bar"><span>UBUNTU TERMINAL</span><button class="copy">Copy</button></div><pre>python3 --version
 git --version
-code --version</pre></div>
-<div class="explain"><p><strong>What this does</strong>Asks Python, Git, and VS Code to print their installed versions.</p><p class="why"><strong>Why we do it</strong>If the terminal cannot find a tool, the later commands will fail. Fixing that first keeps the rest of the setup clear.</p></div>
-<div class="expected">Pass: Python reports version 3.11 or newer, and Git and VS Code return version information.</div>
-</section>
-
-<section id="repo">
-<h2>2. Open the course repository</h2>
-<div class="command"><div class="bar"><span>GO TO THE PROJECT</span><button class="copy">Copy</button></div><pre>Set-Location "C:\Users\DhananjaiahMaroju\Downloads\ALL\Agentic-AI-40Days"
-code .
-Get-Location
-Test-Path requirements.txt
-Test-Path pyproject.toml
-Test-Path .env.example</pre></div>
-<div class="explain"><p><strong>What this does</strong>Moves into the repository, opens it in VS Code, prints the current folder, and checks three required files.</p><p class="why"><strong>Why we do it</strong>Python and pip commands depend on the working directory. The three <code>True</code> results prove we are at the repository root.</p></div>
-<div class="expected">Pass: all three <code>Test-Path</code> commands return <code>True</code>.</div>
-</section>
-
-<section id="venv">
-<h2>3. Create and activate the virtual environment</h2>
-<div class="command"><div class="bar"><span>CREATE .VENV</span><button class="copy">Copy</button></div><pre>python -m venv .venv
-.\.venv\Scripts\Activate.ps1</pre></div>
-<div class="explain"><p><strong>What this does</strong>Creates a private Python environment in <code>.venv</code> and activates it in the current terminal.</p><p class="why"><strong>Why we do it</strong>The project receives its own packages without changing the global Python installation or another project's dependencies.</p></div>
-<div class="command"><div class="bar"><span>PROVE WHICH PYTHON IS ACTIVE</span><button class="copy">Copy</button></div><pre>python -c "import sys; print(sys.executable)"
-python -m pip --version</pre></div>
-<div class="explain"><p><strong>What this does</strong>Prints the exact Python executable and pip location used by this terminal.</p><p class="why"><strong>Why we do it</strong>The paths should point inside <code>.venv</code>. That is stronger evidence than relying only on the terminal prompt.</p></div>
-<div class="expected">Pass: both paths include <code>.venv</code>.</div>
-</section>
-
-<section id="packages">
-<h2>4. Install the course packages</h2>
-<div class="command"><div class="bar"><span>INSTALL DEPENDENCIES</span><button class="copy">Copy</button></div><pre>python -m pip install --upgrade pip
+code --version</pre></div><div class="explain"><p><strong>What this does</strong>Checks Python and Git from Ubuntu; the editor connection is host-specific.</p><p class="why"><strong>Why we do it</strong>The course requires Python 3.11+. If VS Code is connected to this host, <code>code</code> opens the folder. Otherwise use the editor connection appropriate to the host.</p></div><div class="expected">Pass: Python prints 3.11+ and Git prints a version. Use VS Code or another editor connection appropriate to this Ubuntu host.</div></section><section id="repo"><h2>2. Put the repository in the Linux home folder</h2><p class="lead">Keep course code under <code>~/src</code>. Keep the course project in your Ubuntu home directory.</p><div class="command"><div class="bar"><span>CLONE OR REUSE THE COURSE REPOSITORY</span><button class="copy">Copy</button></div><pre>mkdir -p ~/src
+if [ ! -d ~/src/agentic-ai-40days/.git ]; then
+  git clone https://github.com/Dhananjaiah/Agentic-AI-40Days.git ~/src/agentic-ai-40days
+fi
+cd ~/src/agentic-ai-40days
+pwd
+test -f requirements.txt && echo "requirements.txt found"
+test -f pyproject.toml && echo "pyproject.toml found"
+test -f .env.example && echo ".env.example found"
+code .</pre></div><div class="explain"><p><strong>What this does</strong>Creates a Linux workspace, clones the course on the first run, verifies the required files, and opens the Ubuntu folder in VS Code when that command is available.</p><p class="why"><strong>Why we do it</strong>Keeping the repository in the Ubuntu home directory keeps Git, Python, permissions, containers, and later deployment tooling consistent.</p></div><div class="expected">Pass: <code>pwd</code> starts with <code>/home/</code> and all three files are found. Open the folder in your available editor.</div></section><section id="venv"><h2>3. Create the project environment</h2><p class="lead">Run all remaining Day 0 commands from <code>~/src/agentic-ai-40days</code> in Ubuntu.</p><div class="command"><div class="bar"><span>CREATE AND ACTIVATE .VENV</span><button class="copy">Copy</button></div><pre>python3 -m venv .venv
+source .venv/bin/activate
+python --version
+python -c "import sys; print(sys.executable)"</pre></div><div class="explain"><p><strong>What this does</strong>Creates an isolated Python environment, activates it, and shows the active interpreter.</p><p class="why"><strong>Why we do it</strong>Each course project keeps its own dependencies. Activation prevents package conflicts.</p></div><div class="expected">Pass: the prompt begins with <code>(.venv)</code>, and the executable ends in <code>/.venv/bin/python</code>.</div></section><section id="packages"><h2>4. Install the pinned course packages</h2><p class="lead">Keep <code>(.venv)</code> visible before installing anything.</p><div class="command"><div class="bar"><span>INSTALL DEPENDENCIES AND COURSE HELPER</span><button class="copy">Copy</button></div><pre>python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-python -m pip install -e .</pre></div>
-<div class="explain"><p><strong>What this does</strong>Updates pip, installs the shared dependencies, and installs this repository as an editable Python package.</p><p class="why"><strong>Why we do it</strong>The lab imports provider libraries and shared course helpers. Editable installation makes those local helpers importable while we continue changing the code.</p></div>
-</section>
-
-<section id="config">
-<h2>5. Create the private local configuration</h2>
-<div class="notice danger"><strong>Stop or hide screen capture before adding a real API key.</strong> Never paste the key into the terminal, source code, recording, screenshot, chat, or Git.</div>
-<div class="command"><div class="bar"><span>CREATE LOCAL .ENV</span><button class="copy">Copy</button></div><pre>Copy-Item .env.example .env
-code .env</pre></div>
-<div class="explain"><p><strong>What this does</strong>Copies the safe configuration template into a local <code>.env</code> file and opens it for editing.</p><p class="why"><strong>Why we do it</strong>The template shows the required names. The local file holds the real private value and must stay outside Git.</p></div>
-<div class="notice">Privately replace only the selected provider's placeholder value. Save and close <code>.env</code>, then resume recording. Do not show the file again.</div>
-<div class="command"><div class="bar"><span>PROVE GIT IGNORES THE SECRET</span><button class="copy">Copy</button></div><pre>git check-ignore -v .env</pre></div>
-<div class="explain"><p><strong>What this does</strong>Asks Git which ignore rule prevents <code>.env</code> from being tracked.</p><p class="why"><strong>Why we do it</strong>A real API key can allow usage and cost. We need proof that Git will not add this secret file by accident.</p></div>
-<div class="expected">Pass: Git prints the matching ignore rule and <code>.env</code> path. Stop if it prints nothing.</div>
-</section>
-
-<section id="check">
-<h2>6. Run the no-cost setup checker</h2>
-<div class="command"><div class="bar"><span>VERIFY LOCAL SETUP</span><button class="copy">Copy</button></div><pre>python phase-0-get-ready/day-00/labs/lab-0.5b-setup-project/solution/check_setup.py</pre></div>
-<div class="explain"><p><strong>What this does</strong>Checks the Python version, virtual environment, required packages, shared imports, and presence of the configured API key.</p><p class="why"><strong>Why we do it</strong>This separates local setup problems from provider or network problems before we spend money on a model request.</p></div>
-<div class="expected">Pass: the script reports that all checks passed. This does not yet prove the key is accepted by the provider.</div>
-</section>
-
-<section id="call">
-<h2>7. Run the first real AI call</h2>
-<div class="notice">This step contacts the configured provider, sends the prompt outside your machine, and may create usage charges. Use only harmless text.</div>
-<div class="command"><div class="bar"><span>RUN HELLO AI</span><button class="copy">Copy</button></div><pre>python phase-0-get-ready/day-00/labs/lab-0.5c-hello-ai/solution/hello_ai.py</pre></div>
-<div class="explain"><p><strong>What this does</strong>Loads the local configuration, sends a small prompt to the selected AI provider, and prints the generated response and usage information.</p><p class="why"><strong>Why we do it</strong>This is the end-to-end proof: local Python, installed packages, private configuration, network access, provider authentication, and model response all worked together.</p></div>
-<div class="expected">Pass: the command finishes with meaningful generated text and usage information. The exact wording and token count can change.</div>
-</section>
-
-<section id="variation">
-<h2>8. Change one prompt and compare</h2>
-<div class="command"><div class="bar"><span>OPEN THE EXAMPLE</span><button class="copy">Copy</button></div><pre>code phase-0-get-ready/day-00/labs/lab-0.5c-hello-ai/solution/hello_ai.py</pre></div>
-<div class="explain"><p><strong>What this does</strong>Opens the completed example so you can change only its prompt.</p><p class="why"><strong>Why we do it</strong>Changing one variable makes the effect easier to observe. Use: “Explain an API key to a ten-year-old in two sentences.”</p></div>
-<div class="command"><div class="bar"><span>RUN THE CHANGED PROMPT</span><button class="copy">Copy</button></div><pre>python phase-0-get-ready/day-00/labs/lab-0.5c-hello-ai/solution/hello_ai.py</pre></div>
-<div class="explain"><p><strong>What this does</strong>Sends the edited prompt and prints a new response.</p><p class="why"><strong>Why we do it</strong>Compare the content, the two-sentence constraint, and usage. This shows how the prompt influences the result without promising identical wording.</p></div>
-</section>
-
-<section id="troubleshoot">
-<h2>9. Troubleshoot by layer</h2>
-<div class="command"><div class="bar"><span>LOCAL ENVIRONMENT CHECKS</span><button class="copy">Copy</button></div><pre>python --version
+python -m pip install -e .</pre></div><div class="explain"><p><strong>What this does</strong>Updates pip inside the active environment, installs pinned packages, and installs the local course helper in editable mode.</p><p class="why"><strong>Why we do it</strong>The labs import provider SDKs and <code>shared.llm</code>. Editable installation makes the helper importable from every lab folder.</p></div><div class="expected">Pass: every command completes without an error and <code>python -c "import shared.llm"</code> succeeds.</div></section><section id="config"><h2>5. Create private local configuration</h2><p class="lead">Stop screen capture before adding a real API key. Never paste a key into a terminal, source file, recording, screenshot, chat, or Git commit.</p><div class="command"><div class="bar"><span>CREATE LOCAL .ENV</span><button class="copy">Copy</button></div><pre>cp .env.example .env
+code .env</pre></div><div class="explain"><p><strong>What this does</strong>Copies the safe template into a private local file and opens it in VS Code.</p><p class="why"><strong>Why we do it</strong>The template documents variable names. The real credential belongs only in ignored local <code>.env</code>.</p></div><div class="notice danger"><strong>Private action:</strong> replace only the selected provider placeholder while recording is stopped. Save and close <code>.env</code> before resuming.</div><div class="command"><div class="bar"><span>PROVE GIT IGNORES THE SECRET</span><button class="copy">Copy</button></div><pre>git check-ignore -v .env</pre></div><div class="explain"><p><strong>What this does</strong>Asks Git which ignore rule prevents <code>.env</code> from being tracked.</p><p class="why"><strong>Why we do it</strong>An API key can create usage and cost. We need visible proof that Git will not add this secret file by accident.</p></div><div class="expected">Pass: Git prints the matching ignore rule and the <code>.env</code> path. Stop if it prints nothing.</div></section><section id="check"><h2>6. Run the no-cost setup checker</h2><p class="lead">This proves local setup before a provider request can incur cost.</p><div class="command"><div class="bar"><span>VERIFY LOCAL SETUP</span><button class="copy">Copy</button></div><pre>python phase-0-get-ready/day-00/labs/lab-0.5b-setup-project/solution/check_setup.py</pre></div><div class="explain"><p><strong>What this does</strong>Checks Python, the active virtual environment, required packages, shared imports, and API-key presence.</p><p class="why"><strong>Why we do it</strong>It separates local setup problems from provider authentication or network problems.</p></div><div class="expected">Pass: all checks pass. This does not yet prove the provider accepts the key.</div></section><section id="call"><h2>7. Run the first real AI call</h2><p class="lead">This contacts the configured provider, sends a harmless prompt outside your machine, and may create usage charges.</p><div class="command"><div class="bar"><span>RUN HELLO AI</span><button class="copy">Copy</button></div><pre>python phase-0-get-ready/day-00/labs/lab-0.5c-hello-ai/solution/hello_ai.py</pre></div><div class="explain"><p><strong>What this does</strong>Loads local configuration, sends a small prompt, and prints response text plus usage information.</p><p class="why"><strong>Why we do it</strong>This is the end-to-end proof: Ubuntu Python, packages, private configuration, network, provider authentication, and model response worked together.</p></div><div class="expected">Pass: meaningful generated text and usage appear. Exact wording and token counts vary.</div><div class="command"><div class="bar"><span>CHANGE ONE PROMPT, THEN RERUN</span><button class="copy">Copy</button></div><pre>code phase-0-get-ready/day-00/labs/lab-0.5c-hello-ai/solution/hello_ai.py
+python phase-0-get-ready/day-00/labs/lab-0.5c-hello-ai/solution/hello_ai.py</pre></div><div class="explain"><p><strong>What this does</strong>Opens the example, lets you change only its prompt, then runs it again.</p><p class="why"><strong>Why we do it</strong>A controlled change shows how instructions affect output without promising identical wording.</p></div><div class="notice">Suggested harmless prompt: <code>Explain an API key to a ten-year-old in two sentences.</code></div></section><section id="troubleshoot"><h2>8. Troubleshoot by layer</h2><p class="lead">Read the first useful error, name the failing layer, change one thing, then rerun the same check.</p><div class="command"><div class="bar"><span>LOCAL ENVIRONMENT CHECKS</span><button class="copy">Copy</button></div><pre>python --version
 python -c "import sys; print(sys.executable)"
 python -m pip --version
-python phase-0-get-ready/day-00/labs/lab-0.5b-setup-project/solution/check_setup.py</pre></div>
-<div class="explain"><p><strong>What this does</strong>Rechecks Python, the active environment, pip, packages, imports, and key presence in a useful order.</p><p class="why"><strong>Why we do it</strong>Read the first useful error, name the failing layer, change one thing, and rerun the same failed command.</p></div>
-<div class="command"><div class="bar"><span>REINSTALL IF AN IMPORT IS MISSING</span><button class="copy">Copy</button></div><pre>.\.venv\Scripts\Activate.ps1
+python phase-0-get-ready/day-00/labs/lab-0.5b-setup-project/solution/check_setup.py</pre></div><div class="explain"><p><strong>What this does</strong>Rechecks Python, the active environment, pip, packages, imports, and key presence in order.</p><p class="why"><strong>Why we do it</strong>This identifies whether a problem is Ubuntu setup, the virtual environment, packages, configuration, network, or provider access.</p></div><div class="command"><div class="bar"><span>REINSTALL IF AN IMPORT IS MISSING</span><button class="copy">Copy</button></div><pre>source .venv/bin/activate
 python -m pip install -r requirements.txt
-python -m pip install -e .</pre></div>
-<div class="explain"><p><strong>What this does</strong>Reactivates the virtual environment and reinstalls the dependencies and local package.</p><p class="why"><strong>Why we do it</strong>Use this only when the error says a required module or the shared package is missing.</p></div>
-<div class="notice danger">For authentication errors, check or replace the key privately in the provider console. Never print the key to diagnose it.</div>
-</section>
-
-<details>
-<summary>macOS or Linux command differences</summary>
-<div class="command"><div class="bar"><span>CREATE AND ACTIVATE</span><button class="copy">Copy</button></div><pre>python3 -m venv .venv
-source .venv/bin/activate</pre></div>
-<div class="explain"><p><strong>What this does</strong>Creates and activates the same virtual environment using Unix-style paths.</p><p class="why"><strong>Why we do it</strong>The goal is identical; only the executable name and activation path differ.</p></div>
-<div class="command"><div class="bar"><span>CREATE LOCAL CONFIGURATION</span><button class="copy">Copy</button></div><pre>cp .env.example .env
-code .env</pre></div>
-<div class="explain"><p><strong>What this does</strong>Copies the template using the macOS/Linux command and opens the private file.</p><p class="why"><strong>Why we do it</strong>The API key still belongs only in local <code>.env</code>, regardless of operating system.</p></div>
-</details>
-
-<details>
-<summary>Finish or leave the environment</summary>
-<div class="command"><div class="bar"><span>DEACTIVATE</span><button class="copy">Copy</button></div><pre>deactivate</pre></div>
-<div class="explain"><p><strong>What this does</strong>Leaves the virtual environment in the current terminal.</p><p class="why"><strong>Why we do it</strong>This is optional. Keep <code>.venv</code> and <code>.env</code> because later course days use them.</p></div>
-</details>
-
-<footer>Day 0 proves one controlled request path. It does not yet prove production readiness, stable output, fixed cost, or safe handling of sensitive production data.</footer>
-</main>
-<script>
+python -m pip install -e .</pre></div><div class="explain"><p><strong>What this does</strong>Reactivates the environment and reinstalls dependencies and the local package.</p><p class="why"><strong>Why we do it</strong>Use this only when an error identifies a missing module or missing <code>shared</code> package.</p></div><div class="notice">If <code>python3 -m venv</code> fails, run <code>sudo apt update &amp;&amp; sudo apt install -y python3-venv</code>, then rerun the same command.</div></section><details><summary>Finish or leave the environment</summary><div class="command"><div class="bar"><span>DEACTIVATE</span><button class="copy">Copy</button></div><pre>deactivate</pre></div><div class="explain"><p><strong>What this does</strong>Leaves the virtual environment in the current Ubuntu terminal.</p><p class="why"><strong>Why we do it</strong>This is optional. Keep <code>.venv</code> and <code>.env</code> because later days use them.</p></div></details><footer>Day 0 proves one controlled request path in Ubuntu. It does not yet prove production readiness, stable output, fixed cost, or safe handling of sensitive production data.</footer></main><script>
 function commandText(command){return command.querySelector('pre').innerText.replace(/\u00a0/g,' ').trim()}
 async function copyText(value){if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(value);return}const area=document.createElement('textarea');area.value=value;area.setAttribute('readonly','');area.style.position='fixed';area.style.opacity='0';document.body.appendChild(area);area.select();const copied=document.execCommand('copy');area.remove();if(!copied)throw new Error('Copy failed')}
 document.querySelectorAll('.command').forEach(command=>{const button=command.querySelector('.copy');button.addEventListener('click',async()=>{try{await copyText(commandText(command));button.textContent='Copied';button.classList.add('done');setTimeout(()=>{button.textContent='Copy';button.classList.remove('done')},1400)}catch{button.textContent='Select & copy'}})});
-</script>
-</body>
-</html>
+</script></body></html>

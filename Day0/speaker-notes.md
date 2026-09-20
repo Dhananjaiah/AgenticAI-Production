@@ -133,60 +133,55 @@ We only install what we need now. We will add other tools later when the course 
 
 ## 07. The terminal is where we prove things.
 
-[SLIDE 07 — Point to the command and expected result.]
+[SLIDE 07 ? Show the Ubuntu terminal command.]
 
-The terminal is where we run commands and check results.
+The terminal is where we run a command and observe evidence.
 
-Type python, then two hyphens, then version. Press Enter.
+For this course, Ubuntu Bash is the one terminal convention. Ubuntu can be local, virtualized, cloud-hosted, or reached through a remote connection. The host does not change the commands we learn.
 
-The terminal should show Python three point eleven or a newer version.
+Run python three dash dash version in Ubuntu. The expected evidence is Python three point eleven or newer.
 
-If Windows says Python is not recognized, it usually means Python was not added to PATH. PATH is simply the list of places where the computer looks for programs.
+If Ubuntu cannot find Python, that is an Ubuntu setup problem, not an AI-code problem. Install Python three and Python three dash venv, then rerun the same version command.
 
-If you use a Mac and the python command does not work, try python three instead.
-
-The important habit is this: do not stop after clicking Install. Run a command and check the result. The result is our proof that the installation works.
+Opening a terminal is preparation. Seeing the version in Ubuntu is evidence.
 
 [GO TO SLIDE 08.]
+## 08. Set up Ubuntu and an editor.
 
-## 08. Install Python and VS Code.
+[SLIDE 08 ? Show the four setup steps.]
 
-[SLIDE 08 — Begin the installation lab.]
+We use Ubuntu as the course development environment. It may be a local Ubuntu machine, a local VM, a cloud VM such as AWS EC2 or Oracle Cloud, WSL, or another supported Ubuntu host. The important point is that every course command runs in Ubuntu Bash.
 
-Now let us install Python and VS Code.
+Start only after you have an Ubuntu terminal, Python three, Git, and an editor connection. VS Code is recommended, but it may connect locally or remotely over SSH, through WSL, or through another supported workflow.
 
-Download Python from the official Python website. On Windows, select the option called Add python dot exe to PATH before you start the installation.
+Run python three dash dash version and git dash dash version in Ubuntu. Python must be version three point eleven or newer.
 
-When the installation finishes, open a new terminal. A terminal that was already open may not see the new PATH setting.
+Create the course workspace under home slash your-name slash src. Clone the repository there.
 
-Run the version command and check that the version is three point eleven or newer.
+Open the repository in your available editor. If VS Code is connected to this Ubuntu host, code dot opens the folder.
 
-Next, install VS Code. Open VS Code, then open the complete course repository folder. Do not open only one file because we want the terminal to start in the correct project.
+[LIVE DEMO ? Open Ubuntu, run the version checks, clone or open the repository, and open the folder in the editor.]
 
-[LIVE DEMO — Install the tools, run the version check, and open the repository.]
-
-Pause the video here. Continue only when the version command works and VS Code shows the course folder.
+Pause the video here. Continue only when Ubuntu can run Python and the repository is under the Ubuntu home folder.
 
 [GO TO SLIDE 09.]
-
 ## 09. Read the error before changing anything.
 
-[SLIDE 09 — Show the error.]
+[SLIDE 09 ? Show the Ubuntu error.]
 
 Errors are normal. The important skill is learning how to read them.
 
-This error says the terminal cannot find Python. It does not mean our AI code is wrong. The problem happens before our code can even run.
+This example says python three is not found. It does not mean our AI code is wrong. The problem happens before our code can run.
 
-On Windows, the usual fix is to install Python again and select Add Python to PATH. Then close the old terminal, open a new one, and run the same version command.
+For a missing Ubuntu package, install the required package, then rerun the exact same command. For a missing virtual-environment package, run sudo apt update and then sudo apt install dash y python three dash venv.
 
 Use this simple method whenever something fails.
 
-First, read the first useful error line. Second, decide which part failed. Third, change only one thing. Fourth, run the same check again.
+First, read the first useful error line. Second, decide which layer failed. Third, change only one thing. Fourth, run the same check again.
 
 Changing many things at the same time makes the problem harder to understand.
 
 [GO TO SLIDE 10.]
-
 ## 10. An API key is a credential.
 
 [SLIDE 10 — Follow the request path.]
@@ -241,26 +236,21 @@ Security rules are stronger when we test them instead of only assuming they work
 
 [GO TO SLIDE 13.]
 
-## 13. Create the project’s private toolbox.
+## 13. Create the project?s private toolbox.
 
-[SLIDE 13 — Begin the project setup lab.]
+[SLIDE 13 ? Begin the project setup lab.]
 
 Now we create a virtual environment for this course.
 
 A virtual environment is a private Python toolbox for one project. Packages installed here will not mix with packages from other projects.
 
-Run python dash m venv dot-venv.
+In Ubuntu, run python three dash m venv dot-venv. Then run source dot-venv slash bin slash activate.
 
-On Windows PowerShell, run dot-venv backslash Scripts backslash Activate dot ps one.
+After activation, you should normally see dot-venv in parentheses at the start of the terminal line. That tells us the terminal is using this project?s Python environment.
 
-On a Mac or Linux computer, run source dot-venv slash bin slash activate.
-
-After activation, you should normally see dot-venv in parentheses at the start of the terminal line. That tells us the terminal is using this project’s Python environment.
-
-[LIVE DEMO — Create and activate the environment. Point to the dot-venv name in the terminal.]
+[LIVE DEMO ? Create and activate the environment. Point to the dot-venv name in the terminal.]
 
 [GO TO SLIDE 14.]
-
 ## 14. Install pinned dependencies and the shared helper.
 
 [SLIDE 14 — Keep the virtual environment active.]
@@ -281,11 +271,11 @@ We use listed package versions so every learner starts with the same tested setu
 
 ## 15. Create local configuration safely.
 
-[SLIDE 15 — Do not show the real key.]
+[SLIDE 15 ? Do not show the real key.]
 
 Now we create the private configuration file.
 
-On Windows, copy dot-env example to dot-env. On a Mac or Linux computer, use the cp command shown on the slide.
+In Ubuntu, copy dot-env example to dot-env with the cp command shown on the slide.
 
 Open dot-env and choose the provider you want to use. Paste the matching API key.
 
@@ -295,10 +285,9 @@ Close the file before you start recording again.
 
 Then run the Git ignore check. Make sure Git reports that dot-env is ignored.
 
-[LIVE DEMO — Copy the template. Stop recording. Add the key privately. Close the file, resume recording, and run the ignore check.]
+[LIVE DEMO ? Copy the template. Stop recording. Add the key privately. Close the file, resume recording, and run the ignore check.]
 
 [GO TO SLIDE 16.]
-
 ## 16. Run the setup gate.
 
 [SLIDE 16 — Run the setup checker.]
@@ -407,13 +396,13 @@ One good answer is not enough to prove that a prompt is always reliable. We will
 
 ## 21. Find the failing layer.
 
-[SLIDE 21 — Walk down the table.]
+[SLIDE 21 ? Read the troubleshooting table.]
 
-If the first call fails, use the message to find the part that failed.
+A similar error message can come from different layers. Name the layer before you try a fix.
 
-If Python is not recognized, check the Python installation and PATH.
+If python three is not found, check the Ubuntu runtime and installed packages.
 
-If Python says there is no module named shared, make sure the virtual environment is active and that you ran pip install dash e dot.
+If shared cannot be imported, check that dot-venv is active and that pip install dash e dot has completed.
 
 If the key is missing, check dot-env, the selected provider, and the matching key name.
 
@@ -426,7 +415,6 @@ A timeout may be caused by your internet connection, a company proxy, or the pro
 Always read the real error. Never share a secret when asking for help.
 
 [GO TO SLIDE 22.]
-
 ## 22. Know what you send and what you spend.
 
 [SLIDE 22 — Point to Before, After, and Account.]
@@ -503,13 +491,15 @@ The prompt and request details go to the provider. The answer and usage informat
 
 ## 25. Day 0 readiness check.
 
-[SLIDE 25 — Check each item using real evidence.]
+[SLIDE 25 ? Check each item using real evidence.]
 
 This is the final Day Zero checklist.
 
-Mark an item only after you have checked it on your own computer.
+Mark an item only after you have checked it on your own computer or Ubuntu host.
 
-Confirm that Python works in a new terminal and VS Code opens the repository.
+Confirm that Ubuntu runs Python and your editor opens the Ubuntu-hosted repository.
+
+Confirm that the repository is under home slash your-name slash src.
 
 Confirm that dot-venv is active and the packages are installed.
 
@@ -524,23 +514,21 @@ Finally, make sure you can explain what data was sent and why the request may co
 If one item is not complete, stop and fix it before Day One.
 
 [GO TO SLIDE 26 WHEN ALL ITEMS ARE COMPLETE.]
+## 26. Your machine can now make a controlled AI request.
 
-## 26. Your machine can now makea controlled AI request.
+[SLIDE 26 ? Close the main lesson.]
 
-[SLIDE 26 — Close the main lesson.]
+Your Ubuntu course environment is now ready for the next lesson.
 
-Your computer is now ready for the next lesson.
-
-Python and VS Code work. The project has its own virtual environment and packages. Your API key stays in a local file that Git ignores. The setup checker passes, and your program has received a real AI answer.
+Ubuntu and your editor work together. The Ubuntu-hosted project has its own virtual environment and packages. Your API key stays in a local file that Git ignores. The setup checker passes, and your program has received a real AI answer.
 
 You also understand the important boundaries. The prompt leaves your computer. The API key gives access to your account. The model call can cost money. The internet or provider can fail.
 
-In Day One, we will look more closely at language models, tokens, context, and prompts. We will turn today’s first call into a repeatable program that we understand clearly.
+In Day One, we will look more closely at language models, tokens, context, and prompts. We will turn today?s first call into a repeatable program that we understand clearly.
 
-Keep this setup. Every later lab builds on it.
+Keep this Ubuntu setup. Every later lab builds on it.
 
 [END THE MAIN LESSON OR GO TO THE REFERENCE SLIDE.]
-
 ## 27. Day 0 recording companion.
 
 [SLIDE 27 — Optional reference slide.]
